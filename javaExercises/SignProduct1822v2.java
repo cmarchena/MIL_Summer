@@ -4,14 +4,15 @@ import java.math.BigInteger;
 
 // Solved using Test-driven development (Red,Green,Refactor)
 
-public class SignProduct1822 {
+public class SignProduct1822v2 {
 
     public static int arraySign(int[] nums) {
 
         return signFunc(nums);
     }
 
-    // This solution works up to testcase 7. It breaks with testcase 8
+    // Use this option to track accumulator with the debugger and see how it
+    // overflows
     /*
      * public static int signFunc(int[] product) {
      * int accumulator = 1;
@@ -35,6 +36,8 @@ public class SignProduct1822 {
      * return 0;
      * }
      */
+    // This solution works up to testcase 8.
+
     public static int signFunc(int[] product) {
         BigInteger accumulator = BigInteger.ONE;
         int negativeCount = 0;
